@@ -37,6 +37,7 @@
                 You <i>know</i> you want to.
             </div>
             <div class="form">
+                <div class="white-part">
                 <h3>Let's do this!</h3>
                 <form>
                     <div class="mini-containers">
@@ -53,20 +54,22 @@
                     </div>
                     <div class="mini-containers">
                         <label for="number">PHONE NUMBER</label>
-                        <input type="tel" name="number" id="number" required/>
+                        <input type="tel" name="number" id="number" pattern="/(068)[0-9]{10}/g" required/>
                     </div>
                     <div class="mini-containers">
                         <label for="pwd">PASSWORD</label>
-                        <input type="password" name="password" id="pwd" required/>
+                        <input class="error" type="password" name="password" id="pwd" minlength="8" pattern="/[A-Z]+[0-9]+[a-b]/g" required/>
+                        <div class="error-content">* Passwords do not match</div>
                     </div>
                     <div class="mini-containers">
-                        <label for="name">CONFIRM PASSWORD</label>
-                        <input type="text" name="name" id="name" required/>
+                        <label for="pwd-confirm">CONFIRM PASSWORD</label>
+                        <input class="error" type="password" name="password-confirm" id="pwd-confirm" minlength="8" pattern="/[A-Z]+[0-9]+[a-b]/g" required/>
                     </div>
+                </div>
+                <div>
+                    <button type="submit">Create Account</button>
+                </div>
                 </form>
-            </div>
-            <div>
-                <button type="submit">Create Account</button>
             </div>
             <div class="log">Already have an account. <a href="" class="log-in">Log in</a></div>
         </div>
